@@ -1,0 +1,230 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Project OJT\\Web API with ASP.NET Core\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\dataaccess\\estorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\dataaccess\\estorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\dataaccess\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\dataaccess\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\dataaccess\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\dataaccess\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\dataaccess\\interface\\isendmailservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\dataaccess\\interface\\isendmailservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\dataaccess\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\dataaccess\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\dataaccess\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\dataaccess\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\controllers\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\controllers\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\controllers\\ordertablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\controllers\\ordertablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|d:\\project ojt\\web api with asp.net core\\estore\\models\\applicationusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197CDAD6-1E8F-44DE-84C6-BB53365FB899}|eStore\\eStore.csproj|solutionrelative:estore\\models\\applicationusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "eStoreContext.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\eStoreContext.cs",
+              "RelativeDocumentMoniker": "eStore\\DataAccess\\eStoreContext.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\eStoreContext.cs",
+              "RelativeToolTip": "eStore\\DataAccess\\eStoreContext.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAywCYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T09:36:27.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductImage.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\ProductImage.cs",
+              "RelativeDocumentMoniker": "eStore\\DataAccess\\ProductImage.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\ProductImage.cs",
+              "RelativeToolTip": "eStore\\DataAccess\\ProductImage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T18:11:01.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\appsettings.json",
+              "RelativeDocumentMoniker": "eStore\\appsettings.json",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\appsettings.json",
+              "RelativeToolTip": "eStore\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-22T15:56:21.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\Repository\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "eStore\\DataAccess\\Repository\\AccountRepository.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\Repository\\AccountRepository.cs",
+              "RelativeToolTip": "eStore\\DataAccess\\Repository\\AccountRepository.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAA+wCEAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T15:55:42.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ISendMailServiceRepository.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\Interface\\ISendMailServiceRepository.cs",
+              "RelativeDocumentMoniker": "eStore\\DataAccess\\Interface\\ISendMailServiceRepository.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\Interface\\ISendMailServiceRepository.cs",
+              "RelativeToolTip": "eStore\\DataAccess\\Interface\\ISendMailServiceRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T15:33:16.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "eStore\\DataAccess\\ApplicationUser.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\ApplicationUser.cs",
+              "RelativeToolTip": "eStore\\DataAccess\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T15:33:12.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "eStore\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "eStore\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAxwC0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T03:38:44.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderTablesController.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Controllers\\OrderTablesController.cs",
+              "RelativeDocumentMoniker": "eStore\\Controllers\\OrderTablesController.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Controllers\\OrderTablesController.cs",
+              "RelativeToolTip": "eStore\\Controllers\\OrderTablesController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAQwC8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T03:34:39.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FeedbacksController.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Controllers\\FeedbacksController.cs",
+              "RelativeDocumentMoniker": "eStore\\Controllers\\FeedbacksController.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Controllers\\FeedbacksController.cs",
+              "RelativeToolTip": "eStore\\Controllers\\FeedbacksController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAmwCYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T02:40:42.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationUserModel.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Models\\ApplicationUserModel.cs",
+              "RelativeDocumentMoniker": "eStore\\Models\\ApplicationUserModel.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Models\\ApplicationUserModel.cs",
+              "RelativeToolTip": "eStore\\Models\\ApplicationUserModel.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T03:34:27.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "eStore\\Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "eStore\\Controllers\\AccountsController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCsAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T00:58:44.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\Product.cs",
+              "RelativeDocumentMoniker": "eStore\\DataAccess\\Product.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\DataAccess\\Product.cs",
+              "RelativeToolTip": "eStore\\DataAccess\\Product.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T00:34:37.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Program.cs",
+              "RelativeDocumentMoniker": "eStore\\Program.cs",
+              "ToolTip": "D:\\Project OJT\\Web API with ASP.NET Core\\eStore\\Program.cs",
+              "RelativeToolTip": "eStore\\Program.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAADcAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T15:52:34.016Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
