@@ -102,17 +102,28 @@ namespace eStore.DataAccess.Repository
             var result = await userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                if (!await roleManager.RoleExistsAsync(AppRole.Customer))
-                {
-                    await roleManager.CreateAsync(new IdentityRole(AppRole.Customer));
-                }
+                //if (!await roleManager.RoleExistsAsync(AppRole.Customer))
+                //{
+                //    await roleManager.CreateAsync(new IdentityRole(AppRole.Customer));
+                //}
                 /*IdentityUserRole<string> identityUserRole = new IdentityUserRole<string>();
                 identityUserRole.UserId = user.Id;
                 identityUserRole.RoleId = context.Roles.SingleOrDefault(r => r.Name.Equals(AppRole.Customer)).Id;
 
                 context.UserRoles.Add(identityUserRole);
                 context.SaveChanges();*/
-                await userManager.AddToRoleAsync(user, AppRole.Customer);
+                //await userManager.AddToRoleAsync(user, AppRole.Customer);
+
+                string role = model.RoleName;
+
+                if (role == AppRole.Customer || role == "RentalProvider")
+                {
+                    await userManager.AddToRoleAsync(user, role);
+                }
+                else
+                {
+                    throw new ArgumentException("Role is not valid.");
+                }
             }
             return result;
         }

@@ -24,7 +24,7 @@ namespace eStore.Controllers
         }
         [HttpPost("SignUp")]
         [AllowAnonymous]
-        public async Task<IActionResult> SignUp([FromForm] SignUpModel signUpModel)
+        public async Task<IActionResult> SignUp([FromBody] SignUpModel signUpModel)
         {
             var result = await accountRepository.SignUpAsync(signUpModel);
             if (result.Succeeded)
