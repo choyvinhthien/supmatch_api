@@ -1,4 +1,4 @@
-using AutoMapper;
+﻿using AutoMapper;
 using eStore.DataAccess;
 using eStore.DataAccess.Interface;
 using eStore.DataAccess.Repository;
@@ -49,11 +49,13 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
+var corsSettings = builder.Configuration.GetSection("CORS");
+var allowedOrigins = corsSettings.GetSection("AllowedOrigins").Get<string[]>();
 builder.Services.AddCors(option => option.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowMyOrigin",
-        builder => builder.WithOrigins("http://localhost:3000")
+        builder => builder.WithOrigins(allowedOrigins)
                             .AllowAnyMethod()
                             .AllowAnyHeader());
 });
@@ -121,12 +123,17 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
 app.UseCors("AllowMyOrigin");
 
 app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.Run();
