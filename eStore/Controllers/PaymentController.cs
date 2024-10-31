@@ -61,5 +61,39 @@ namespace eStore.Controllers
                 return BitConverter.ToString(hmac.ComputeHash(Encoding.UTF8.GetBytes(data))).Replace("-", "").ToLower();
             }
         }
+
+        [HttpGet("PaymentReturn")]
+        public IActionResult PaymentReturn([FromQuery] Dictionary<string, string> vnpayData)
+        {
+            // Bước 1: Xác thực vnp_SecureHash
+            string vnp_HashSecret = _configuration["VNPay:vnp_HashSecret"];
+            string vnp_SecureHash = vnpayData["vnp_SecureHash"];
+            vnpayData.Remove("vnp_SecureHash"); // Loại bỏ vnp_SecureHash trước khi ký lại
+
+            // Sắp xếp vnpayData theo key và tạo lại hash
+            vnpayData = vnpayData.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
+            string hashData = string.Join("&", vnpayData.Select(kv => kv.Key + "=" + kv.Value));
+            string checkHash = HmacSHA512(vnp_HashSecret, hashData);
+
+            if (checkHash != vnp_SecureHash)
+            {
+                // Xác thực thất bại
+                return BadRequest("Invalid checksum");
+            }
+
+            // Bước 2: Kiểm tra kết quả thanh toán
+            string vnp_ResponseCode = vnpayData["vnp_ResponseCode"];
+            if (vnp_ResponseCode == "00")
+            {
+                // Thanh toán thành công
+                // Cập nhật trạng thái đơn hàng và xử lý logic
+                return Ok("Payment successful");
+            }
+            else
+            {
+                // Thanh toán thất bại
+                return BadRequest("Payment failed");
+            }
+        }
     }
 }
