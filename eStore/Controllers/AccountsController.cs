@@ -56,7 +56,7 @@ namespace eStore.Controllers
         }
         [HttpPost("SignIn")]
         [AllowAnonymous]
-        public async Task<IActionResult> SignIn([FromForm] SignInModel signinModel)
+        public async Task<IActionResult> SignIn([FromBody] SignInModel signinModel)
         {
             var result = await accountRepository.SignInAsync(signinModel);
             if (string.IsNullOrEmpty(result))

@@ -45,23 +45,13 @@ namespace eStore.DataAccess.Repository
                 };
                 if (imageFile.Length > 0)
                 {
-                    //Convert to Binary
-                    string path = Path.Combine(@"D:\C#\Web API with ASP.NET Core\eStore\Uploads", productImageModel.ImageName);
-                    byte[] fileBytes;
-                    using (FileStream fileStream = System.IO.File.Create(path))
+                    // Chuyển đổi file ảnh thành dữ liệu nhị phân trực tiếp mà không cần lưu vào thư mục
+                    using (var memoryStream = new MemoryStream())
                     {
-                        imageFile.CopyTo(fileStream);
-                        fileStream.Flush();
+                        imageFile.CopyTo(memoryStream);
+                        productImageModel.ImageData = memoryStream.ToArray();
+                        productImageModel.ImageSize = (int)memoryStream.Length;
                     }
-                    using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read))
-                    {
-                        fileBytes = new byte[fs.Length];
-                        fs.Read(fileBytes, 0, Convert.ToInt32(fs.Length));
-                    }
-
-                    // File Oject
-                    productImageModel.ImageData = fileBytes;
-                    productImageModel.ImageSize = fileBytes.Length;
                 }
                 //add to db
                 var newProductImage = _mapper.Map<ProductImage>(productImageModel);
