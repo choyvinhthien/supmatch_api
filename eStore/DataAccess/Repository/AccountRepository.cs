@@ -73,16 +73,7 @@ namespace eStore.DataAccess.Repository
 
         public async Task<IdentityResult> SignUpAsync(SignUpModel model)
         {
-            var user = new ApplicationUser
-            {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                Email = model.Email,
-                UserName = model.Email,
-                Address = model.Address,
-                Gender = model.Gender,
-                PhoneNumber = model.PhoneNumber
-            };
+
             /*MailContent content = new MailContent
             {
                 To = "choyvinhthien0209@gmail.com",
@@ -98,23 +89,30 @@ namespace eStore.DataAccess.Repository
                 created = DateTime.Now;
                 if()
             }*/
+            var user = new ApplicationUser
+            {
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Email = model.Email,
+                UserName = model.Email,
+                Address = model.Address,
+                Gender = model.Gender,
+                PhoneNumber = model.PhoneNumber,
+                Status = 1
+            };
+
+            string role = model.RoleName;
+
+            if (role == "RentalProvider")
+            {
+                user.Bank = model.Bank;
+                user.BankAccountNumber = model.BankAccountNumber;
+                user.Status = 0;
+            }
 
             var result = await userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                //if (!await roleManager.RoleExistsAsync(AppRole.Customer))
-                //{
-                //    await roleManager.CreateAsync(new IdentityRole(AppRole.Customer));
-                //}
-                /*IdentityUserRole<string> identityUserRole = new IdentityUserRole<string>();
-                identityUserRole.UserId = user.Id;
-                identityUserRole.RoleId = context.Roles.SingleOrDefault(r => r.Name.Equals(AppRole.Customer)).Id;
-
-                context.UserRoles.Add(identityUserRole);
-                context.SaveChanges();*/
-                //await userManager.AddToRoleAsync(user, AppRole.Customer);
-
-                string role = model.RoleName;
 
                 if (role == AppRole.Customer || role == "RentalProvider")
                 {
