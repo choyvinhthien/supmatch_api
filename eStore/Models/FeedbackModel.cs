@@ -14,7 +14,7 @@ namespace eStore.Models
         public DateTime RatingDate { get; set; }
         public int ProductId { get; set; }
         public string UserId { get; set; }
-        public virtual ProductModel Product { get; set; } = null!;
+        public virtual ProductModel? Product { get; set; } = null!;
         public virtual ApplicationUserModel User { get; set; } = null!;
 
     }

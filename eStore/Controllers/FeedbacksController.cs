@@ -21,20 +21,20 @@ namespace eStore.Controllers
         }
         [HttpPost("AddFeedback")]
         /*[Authorize(Roles = AppRole.Customer)]*/
-        public async Task<IActionResult> AddFeedback([FromForm]string description, [FromForm] float rating, [FromForm] string userId, [FromForm] int productId)
+        public async Task<IActionResult> AddFeedback([FromBody] frmAddFeedback frmAddFeedback)
         {
-                FeedbackModel feedbackModel = new FeedbackModel
+            FeedbackModel feedbackModel = new FeedbackModel
             {
-                Rating = rating,
-                Description = description,
+                Rating = frmAddFeedback.Rating,
+                Description = frmAddFeedback.Description,
                 RatingDate = DateTime.UtcNow,
-                UserId = userId,
-                ProductId = productId
+                UserId = frmAddFeedback.UserId,
+                ProductId = frmAddFeedback.ProductId
             };
             try
             {
                 await _feedbackRepository.CreateFeedback(feedbackModel);
-                await _productsRepository.UpdateRatingAverage(productId);
+                await _productsRepository.UpdateRatingAverage(frmAddFeedback.ProductId);
 
                 return Ok();
             }

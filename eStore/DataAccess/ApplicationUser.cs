@@ -14,6 +14,8 @@ namespace eStore.DataAccess
         public string? Gender {  get; set; } = null!;
         public string? Address { get; set; } = null!;
         public int Status { get; set; }
+        public string? BankAccountNumber { get; set; } = null!;
+        public string? Bank { get; set; } = null!;
         public virtual ICollection<OrderTable> OrderTables { get; set; }
         public virtual ShoppingCart ShoppingCarts { get; set; } = null!;
         public virtual ICollection<Feedback> Feedbacks { get; set; }

@@ -12,9 +12,11 @@ namespace eStore.Models
         }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
-        public string Gender { get; set; } = null!;
-        public string Address { get; set; } = null!;
+        public string? Gender { get; set; } = null!;
+        public string? Address { get; set; } = null!;
         public int Status { get; set; }
+        public string? BankAccountNumber { get; set; } = null!;
+        public string? Bank { get; set; } = null!;
         public virtual ICollection<OrderTableModel> OrderTables { get; set; }
         public virtual ShoppingCartModel ShoppingCarts { get; set; } = null!;
         public virtual ICollection<FeedbackModel> Feedbacks { get; set; }

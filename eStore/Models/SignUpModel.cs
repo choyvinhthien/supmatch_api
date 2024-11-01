@@ -18,5 +18,7 @@ namespace eStore.Models
         public string? ConfirmPassword { get; set; }
         [Required]
         public string RoleName { get; set; } = null!;
+        public string? BankAccountNumber { get; set; } = null!;
+        public string? Bank { get; set; } = null!;
     }
 }
