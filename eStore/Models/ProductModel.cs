@@ -22,11 +22,13 @@ namespace eStore.Models
         public DateTime ReleasedDate { get; set; }
         public int ratingAverage { get; set; }
         public string Status { get; set; } = null!;
+        public string? AccountId { get; set; }
 
         public virtual ICollection<CartItemModel> CartItems { get; set; }
         public virtual ICollection<OrderItemModel> OrderItems { get; set; }
         public virtual ICollection<ProductImageModel> ProductImages { get; set; }
         public virtual CategoryModel Category { get; set; } = null!;
         public virtual ICollection<FeedbackModel> Feedbacks { get; set; }
+        public virtual ApplicationUserModel User { get; set; } = null!;
     }
 }

@@ -27,7 +27,9 @@ namespace eStore.DataAccess.Repository
         }
         public async Task<List<ProductModel>> GetAllProducts()
         {
-            var products = await _context.Products!.Include(p => p.ProductImages).Include(p => p.Category).Include(product => product.Feedbacks.OrderByDescending(s => s.RatingDate)).ThenInclude(feedback => feedback.User).ToListAsync();
+            var products = await _context.Products!.Include(p => p.ProductImages).Include(p => p.Category)
+                                                    .Include(product => product.User)
+                                                    .Include(product => product.Feedbacks.OrderByDescending(s => s.RatingDate)).ThenInclude(feedback => feedback.User).ToListAsync();
             return _mapper.Map<List<ProductModel>>(products);
         }
         public async Task<ProductModel> GetProduct(int productId)
@@ -186,6 +188,14 @@ namespace eStore.DataAccess.Repository
             } while (ProductExists(id).Result);
 
             return id;
+        }
+        public async Task<List<ProductModel>> GetProductsByAccountId(string accountId)
+        {
+            var products = await _context.Products!.Include(p => p.ProductImages).Include(p => p.Category)
+                                                .Include(p => p.User)
+                                                .Include(product => product.Feedbacks.OrderByDescending(s => s.RatingDate)).ThenInclude(feedback => feedback.User)
+                                                .Where(p => accountId.Equals(p.AccountId)).ToListAsync();
+            return _mapper.Map<List<ProductModel>>(products);
         }
     }
 }

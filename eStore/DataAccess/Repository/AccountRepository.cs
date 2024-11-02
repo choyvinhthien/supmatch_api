@@ -135,6 +135,39 @@ namespace eStore.DataAccess.Repository
         {
             return await userManager.FindByIdAsync(userId);
         }
+
+        public async Task<List<ApplicationUser>> GetAllRentalProvidersAsync()
+        {
+            var users = await context.Users
+                .Join(
+                    context.UserRoles,
+                    user => user.Id,
+                    userRole => userRole.UserId,
+                    (user, userRole) => new { user, userRole }
+                )
+                .Join(
+                    context.Roles,
+                    userRole => userRole.userRole.RoleId,
+                    role => role.Id,
+                    (userRole, role) => new { userRole.user, role }
+                )
+                .Where(x => x.role.Name == "RentalProvider")
+                .Select(x => x.user)
+                .ToListAsync();
+
+            return users;
+        }
+        public async Task ActiveRentalProviderById(string id)
+        {
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Id.Equals(id));
+            if (user != null)
+            {
+                user.Status = 1;
+                context.Users.Update(user);
+                await context.SaveChangesAsync();
+            }
+        }
+
         /*public async Task<bool> VerifyEmail(OTP)
         {
 

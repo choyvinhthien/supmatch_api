@@ -20,5 +20,6 @@ namespace eStore.Models
         public virtual ICollection<OrderTableModel> OrderTables { get; set; }
         public virtual ShoppingCartModel ShoppingCarts { get; set; } = null!;
         public virtual ICollection<FeedbackModel> Feedbacks { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

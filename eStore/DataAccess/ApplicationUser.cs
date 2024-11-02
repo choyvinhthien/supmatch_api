@@ -19,5 +19,6 @@ namespace eStore.DataAccess
         public virtual ICollection<OrderTable> OrderTables { get; set; }
         public virtual ShoppingCart ShoppingCarts { get; set; } = null!;
         public virtual ICollection<Feedback> Feedbacks { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

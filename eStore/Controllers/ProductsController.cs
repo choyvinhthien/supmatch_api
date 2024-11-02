@@ -94,20 +94,20 @@ namespace eStore.Controllers
 
         // PUT: api/Products/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("UpdateProduct")]
-        [Authorize(Roles = AppRole.Customer)]
-        public async Task<IActionResult> UpdateProduct(int id, string ProductName, string Description, decimal UnitPrice, int UnitsInstock)
+        [HttpPost("UpdateProduct")]
+        //[Authorize(Roles = AppRole.Customer)]
+        public async Task<IActionResult> UpdateProduct([FromBody]frmUpdateProduct frmUpdateProduct)
         {
             try
             {
-                ProductModel originalProduct = await _productsRepository.GetProduct(id);
+                ProductModel originalProduct = await _productsRepository.GetProduct(frmUpdateProduct.ProductId);
                 ProductModel product = new ProductModel
                 {
-                    ProductId = id,
-                    ProductName = ProductName,
-                    Description = Description,
-                    UnitPrice = UnitPrice,
-                    UnitsInstock = UnitsInstock,
+                    ProductId = frmUpdateProduct.ProductId,
+                    ProductName = frmUpdateProduct.ProductName,
+                    Description = frmUpdateProduct.Description,
+                    UnitPrice = frmUpdateProduct.UnitPrice,
+                    UnitsInstock = frmUpdateProduct.UnitsInstock,
                     ReleasedDate = originalProduct.ReleasedDate,
                     Status = originalProduct.Status
                 };
@@ -122,20 +122,25 @@ namespace eStore.Controllers
 
         // POST: api/Products
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost("AddProduct")]
+        [HttpPut("AddProduct")]
         /*[Authorize(Roles = AppRole.Customer)]*/
-        public async Task<IActionResult> AddNewProduct([FromForm] frmAddProduct newProduct, [FromForm] UploadImage uploadImage)
+        public async Task<IActionResult> AddNewProduct([FromForm] frmAddProduct newProduct)
         {
             ProductModel productModel = new ProductModel
             {
                 ProductId = await _validation.GenerateUniqueId("Product"),
                 ProductName = newProduct.ProductName,
                 Description = newProduct.Description,
-                CategoryId = newProduct.CategoryId,
+                CategoryId = "1",
                 UnitPrice = newProduct.UnitPrice,
                 UnitsInstock = newProduct.UnitsInstock,
                 ReleasedDate = DateTime.UtcNow,
-                Status = "Active"
+                Status = "Active",
+                AccountId = newProduct.AccountId
+            };
+            UploadImage uploadImage = new UploadImage
+            {
+                ImageFile = newProduct.ImageFile
             };
             try
             {
@@ -181,6 +186,20 @@ namespace eStore.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpPost("GetProductsByAccountId")]
+        public async Task<IActionResult> GetProductsByAccountId([FromBody] string accountId)
+        {
+            try
+            {
+                return Ok(await _productsRepository.GetProductsByAccountId(accountId));
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+        
 
         //--------------------------------------------------
         private async Task<bool> ProductExists(int id)

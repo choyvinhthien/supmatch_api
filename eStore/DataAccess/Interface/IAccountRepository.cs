@@ -9,6 +9,8 @@ namespace eStore.DataAccess.Interface
         public Task<string> SignInAsync(SignInModel model);
         Task<ApplicationUser> GetUserAsync(SignInModel model);
         Task<ApplicationUser> GetUserByUserIdAsync(string userId);
+        Task<List<ApplicationUser>> GetAllRentalProvidersAsync();
+        Task ActiveRentalProviderById(string id);
         /*public Task<bool> VerifyEmail();*/
     }
 }

@@ -18,5 +18,6 @@ namespace eStore.DataAccess.Interface
         Task<List<ProductModel>> GetRandomProducts();
         Task UpdateRatingAverage(int productId);
         Task UpdateListProducts(List<ProductModel> products);
+        Task<List<ProductModel>> GetProductsByAccountId(string accountId);
     }
 }

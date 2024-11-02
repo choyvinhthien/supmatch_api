@@ -76,5 +76,26 @@ namespace eStore.Controllers
             }
             return Ok(user);
         }
+        [HttpGet("GetAllRentalProviders")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAllRentalProviders()
+        {
+            var user = await accountRepository.GetAllRentalProvidersAsync();
+            return Ok(user);
+        }
+        [HttpPost("ActiveRentalProviderById")]
+        [AllowAnonymous]
+        public async Task<IActionResult> ActiveRentalProviderById([FromBody] string id)
+        {
+            try
+            {
+                await accountRepository.ActiveRentalProviderById(id);
+                return Ok();
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
     }
 }
