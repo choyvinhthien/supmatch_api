@@ -9,7 +9,8 @@ namespace eStore.Models
         [Required]
         public string LastName { get; set; } = null!;
         public string? Gender { get; set; }
-        public string? PhoneNumber { get; set; }
+        [Required]
+        public string PhoneNumber { get; set; } = null!;
         public string? Address { get; set; }
         [Required, EmailAddress]
         public string Email { get; set; } = null!;
